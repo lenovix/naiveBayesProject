@@ -1,0 +1,10 @@
+Text,Ambulance,Police,Firefighter
+Kecelakaan lalu lintas, 1, 0, 0
+Kebakaran di gedung, 0, 0, 1
+Pencurian di toko, 0, 1, 0
+Gempa bumi, 1, 0, 1
+Korban serangan jantung, 1, 0, 0
+Pengrusakan mobil, 0, 1, 0
+Kebanjiran di kota, 0, 0, 1
+Penculikan anak, 0, 1, 0
+Korban pingsan, 1, 0, 0

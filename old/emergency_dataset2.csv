@@ -1,0 +1,77 @@
+Text,Unit
+kecelakaan,Ambulance
+pingsan,Ambulance
+medis,Ambulance
+terluka,Ambulance
+terluka,Ambulance
+serangan jantung,Ambulance
+overdosis,Ambulance
+stroke,Ambulance
+luka bakar,Ambulance
+reaksi alergi,Ambulance
+hipotermia,Ambulance
+pendarahan,Ambulance
+dehidrasi,Ambulance
+kejang,Ambulance
+luka tembak,Ambulance
+keracunan,Ambulance
+luka robek,Ambulance
+luka tusuk,Ambulance
+luka lecet,Ambulance
+luka sayat,Ambulance
+luka parah,Ambulance
+tidak sadarkan diri,Ambulance
+terjatuh,Ambulance
+pendarahan hebat,Ambulance
+tersambar petir,Ambulance
+tidak bisa bernapas,Ambulance
+tidak bisa bergerak,Ambulance
+tersengat,Ambulance
+
+mencurigakan,Police
+membutuhkan bantuan,Police
+kecelakaan kereta api,Police
+melanggar lalu lintas,Police
+perampokan, Police
+serangan teroris,Police
+ancaman bom,Police
+penembakan,Police
+penculikan,Police
+perkelahian,Police
+pengrusakan,Police
+pembunuhan,Police
+pemerasan,Police
+penyerangan,Police
+pencurian,Police
+penganiayaan,Police
+penipuan,Police
+pelecehan seksual,Police
+pembobolan,Police
+penggelapan uang,Police
+pencemaran lingkungan,Police
+perusakan hutan,Police
+penyalahgunaan narkoba,Police
+Penangkapan narkoba,Police
+Penyanderaan,Police
+Pelanggaran,Police
+Penyelundupan senjata,Police
+Pengancaman,Police
+Pemerkosaan,Police
+kemalingan,Police
+mencuri,Police
+polisi,Police
+melacak,Police
+
+kebakaran,Firefighter
+Butuh bantuan pemadam kebakaran,Firefighter
+terjebak di lift,Firefighter
+terbakar,Firefighter
+terkena petir,Firefighter
+terjatuh,Firefighter
+ledakan,Firefighter
+gas beracun,Firefighter
+banjir,Firefighter
+longsor,Firefighter
+Kebocoran,Firefighter
+ledakan gas,Firefighter
+kebocoran,Firefighter
