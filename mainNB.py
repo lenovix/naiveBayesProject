@@ -6,8 +6,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from flask import Flask, request, jsonify
 
-app = Flask(__name__)
-
 # Membaca dataset dari file csv
 df = pd.read_csv("emergency_dataset.csv")
 
@@ -24,11 +22,11 @@ X_train_tfidf = vectorizer.fit_transform(X_train)
 X_test_tfidf = vectorizer.transform(X_test)
 print(vectorizer.get_feature_names_out())
 
-# Melatih model Naive Bayes dengan TF-IDF vectors
+# Train the Naive Bayes model with TF-IDF vectors
 model = NaiveBayes()
 model.fit(X_train_tfidf, y_train)
 
-# Memprediksi kelas pada data pengujian
+# predictions on testing data
 y_pred = model.predict(X_test_tfidf)
 
 # Menghitung akurasi
@@ -36,27 +34,29 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Akurasi:", accuracy)
 
 
+app = Flask(__name__)
+
+
 @app.route("/predict", methods=["POST"])
 def predict():
     data = request.get_json()
     new_texts = data.get("texts", [])
-
     print("data: ", data)
     print("new_texts: ", new_texts)
 
-    # Transformasi data baru ke representasi vektor
+    # New data transformation to vector representation
     new_X = vectorizer.transform(new_texts)
     print("new_X: ", new_X)
 
-    # Melakukan prediksi
+    # get the keyword
+    keywords = vectorizer.inverse_transform(new_X)[0]
+    print("Keyword:", keywords)
+
+    # Predict new text with naive bayes model
     predictions = model.predict(new_X)
     print("predictions: ", predictions)
 
-    # mengambil kata kunci
-    keywords = vectorizer.inverse_transform(new_X)[0]
-    print("Kata Kunci:", keywords)
-
-    # Mengembalikan hasil prediksi
+    # Returns the predicted result
     results = [
         {"text": text, "prediction": prediction}
         for text, prediction in zip(new_texts, predictions)
@@ -67,5 +67,5 @@ def predict():
 
 if __name__ == "__main__":
     ipHP = "192.168.43.108"
-    ip = "192.168.1.7"
-    app.run(host=ipHP, port=5000)
+    ip = "192.168.1.9"
+    app.run(host=ip, port=5000)
